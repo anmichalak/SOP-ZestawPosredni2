@@ -1,22 +1,26 @@
 #include <stdio.h>
 
-int main(){
-  int a, b;
-
-  printf("Podaj liczbe 1\n");
-  scanf("%d", &a);
-  
-  printf("Podaj liczbe 2\n");
-  scanf("%d", &b);
-
+int nwd(int a, int b){
   int r;
-  r=a%b;
-  
-    while(r!=0){
+  r=a%b; 
+  while(r!=0){
       a=b;
       b=r;
-      r=a%b;     
-    }
-     printf("Najwiekszy wspolny dzielnik %d", b);
-     return 0;
+      r=a%b;
+  }
+ return b;
+}
+
+int main(){
+  int x, y;
+
+  printf("Podaj liczbe 1\n");
+  scanf("%d", &x);
+  
+  printf("Podaj liczbe 2\n");
+  scanf("%d", &y);
+ 
+  int wynik = nwd(x, y);
+  printf("Najwiekszy wspolny dzielnik %d", wynik);
+  return 0;
 }
